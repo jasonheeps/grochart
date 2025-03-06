@@ -1,0 +1,45 @@
+// Defining colors with HSL
+// Hue [0-360]: defines base color, e.g.:
+//    0/360 = red
+//    60 = yellow
+//    120 = green
+//    180 = turquoise
+//    240 = blue
+//    300 = pink
+// Saturation [0-100%]: defines the intensity (gray to full color)
+// Luminosity [0-100%]: amount of white or black added to the color mix
+
+// Differentiate between DESCRIPTIVE naming and FUNCTIONAL naming:
+// $clr-gray: hsl(0, 0%, 60%); // descriptive
+// $link-clr: $clr-gray; // functional
+
+// +++++++++++++++++++++++++++++++
+// + DESCRIPTIVE COLOR VARIABLES +
+// +++++++++++++++++++++++++++++++
+
+// Suffix = '-100', '-200', ..., '-700' (the lower, the darker)
+// The suffix does NOT necessarily match the luminosity percentage
+// (in order to stay flexible, if you decide to change the percentage)
+
+// IN ALPHABETIC ORDER
+
+$gray-100: hsl(0, 0%, 10%);
+
+$green-400: hsl(120, 30%, 40%);
+$green-300: hsl(120, 30%, 30%);
+
+// ++++++++++++++++++++++++++++++
+// + FUNCTIONAL COLOR VARIABLES +
+// ++++++++++++++++++++++++++++++
+// IN ALPHABETIC ORDER
+
+// TEXT
+$txt-clr-dark: $gray-100;
+
+// BUTTONS
+$btn-new-clr: $green-400;
+$btn-new-hover-clr: $green-300;
+
+// $btn-new-clr:
+// $btn-update-clr:
+// $btn-delete-clr:

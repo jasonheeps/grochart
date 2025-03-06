@@ -1,0 +1,31 @@
+// TODO: Find out how I didn't use @import when building soultranet and it still worked
+@import '../config/_global.scss';
+@import '../config/_colors.scss';
+
+// NOTE: - a button with text is structured <a> click me </a>
+//       - an icon button is structured <a> <i> </i> </a>
+
+// a button with centered text, border-radius and background transition
+.btn-basic {
+  // border-radius: ;
+  display: inline-block ;
+  font-size: font-size-base;
+  padding: $btn--padding;
+  text-decoration: none;
+  // transition: ;
+
+  // TODO: find out why the line in global.scss doesn't cover this
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn--clr-new {
+  color: $txt-clr-dark;
+  background-color: $btn-new-clr;
+
+  &:hover {
+    // color: ;
+    background-color: $btn-new-hover-clr;
+  }
+}

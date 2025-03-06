@@ -1,0 +1,300 @@
+// variables named according to BEM method
+
+// TODO: stop using 'base'; stop using 'sm', simply use 's'
+// simply name e.g. '$btn--padding' instead of 'btn--padding-base'
+// then calculate rest: $btn--padding-l = $btn--padding * $ratio
+// system: ..., -xxs, -xs, -s, , -l, -xl, -xxl, ...
+
+// ********************
+// * GLOBAL LAYOUT VARIABLES *
+// ********************
+
+// keep nuances consistent by multiplying or dividing by this ratio
+$ratio: 1.25;
+
+// spacers
+$spacer: 1rem;
+$spacer-l: $spacer * $ratio;
+$spacer-xl: $spacer-l * $ratio;
+$spacer-xxl: $spacer-xl * $ratio;
+$spacer-s: $spacer / $ratio;
+$spacer-xs: $spacer-s / $ratio;
+$spacer-xxs: $spacer-xs / $ratio;
+
+// font-sizes
+$font-size-base: 1rem;
+// $font-size-l: $font-size-base * $ratio * 0.9;
+// $font-size-s: $font-size-base / ($ratio * 0.9);
+// $font-size-xs: $font-size-sm / ($ratio * 0.9);
+
+// // font-weights
+// $headline--font-weight: 900;
+// $subline--font-weight: 500;
+// $copy--font-weight: 300;
+// $copy--font-weight-highlight: 700;
+
+// // max-width
+// $text--max-width: 50ch;
+// $input--max-width: 30ch;
+// $container--max-width-base: 80ch;
+// $container--max-width-lg: $container--max-width-base * $ratio;
+// $container--max-width-xlg: $container--max-width-lg * $ratio;
+// $container--max-width-sm: $container--max-width-base / $ratio;
+// $container--max-width-xsm: $container--max-width-sm / $ratio;
+
+// // width
+// $circle-title-width: 40ch;
+// $email-width: 30ch;
+// $full-name-width: 30ch;
+// $role-filling-status-width: 11ch;
+// $role-title-width: 40ch;
+// $user-authorization-level-width: 20ch;
+// $user-status-width: 13ch;
+
+// // opacity
+// $btn--opacity: 0.85;
+// $btn--bg-clr-transition: background-color 0.15s ease;
+
+// paddings
+$btn--padding: 0.6em 1.2em;
+// $card--padding-base: 1em;
+// $card--padding-sm: $card--padding-base / $ratio;
+
+// ***********************************
+// * GLOBAL ELEMENT DESIGN VARIABLES *
+// ***********************************
+
+// // border-width
+// $border-width-base: 0.1rem;
+// $border-width-sm: $border-width-base / $ratio;
+// $border-width-lg: $border-width-base * $ratio;
+
+// $border-radius-base: 0.2em;
+// $border-radius-circle: 50%;
+// $border-radius-half-circle: 999rem;
+
+// // shadows
+// $box-shadow-blur-base: 10px;
+// $box-shadow-spread-base: 2px;
+// $box-shadow-base: 0 0 $box-shadow-blur-base $box-shadow-spread-base rgba(0, 0, 0, 0.02);
+
+// // outlines
+// $outline-width-base: 0.125rem;
+
+// // ********************
+// // * GLOBAL CSS RULES *
+// // ********************
+
+// h1, h2, h3 {
+//   color: $headline-color;
+// }
+
+// h1 {
+//   margin-bottom: $spacer-lg !important;
+//   font-weight: $headline--font-weight;
+// }
+// h2 {
+//   margin-bottom: $spacer-base !important;
+//   font-weight: $subline--font-weight;
+// }
+// h3 {
+//   margin-bottom: $spacer-sm !important;
+//   font-weight: $subline--font-weight;
+// }
+
+// body {
+//   font-weight: $copy--font-weight;
+// }
+
+// * {
+//   box-sizing: border-box;
+// }
+
+// // Exception-based approach for setting max-width:
+// * {
+//   max-width: $text--max-width;
+// }
+
+// html,
+// body,
+// div,
+// header,
+// nav,
+// main,
+// footer {
+//   max-width: none;
+// }
+
+// html {
+//   // for footer positioning, see https://codepen.io/cbracco/pen/zekgx
+//   height: 100%;
+// }
+
+// body {
+//   // for footer positioning, see https://codepen.io/cbracco/pen/zekgx
+//   position: relative;
+//   min-height: 100%;
+//   padding-bottom: 4rem;
+// }
+
+// a {
+//   &:hover {
+//     text-decoration: none;
+//   }
+// }
+
+// ol, ul, dl {
+//   margin-bottom: 0;
+//   padding: 0;
+//   list-style: none;
+// }
+
+// body {
+//   background: radial-gradient(rgba($clr-highlight-blue-500, 0.03), rgba($clr-highlight-pink-500, 0.03));
+// }
+
+// // **************************
+// // * GLOBAL UTILITY CLASSES *
+// // **************************
+
+// .footer--border-top {
+//   border-top: $border-width-sm solid rgba($clr-corporate-dark-700, 0.18);
+// }
+
+// // NOTE: when border-color is omitted, the text-color is used
+// .border-sm {
+//   border: $border-width-sm solid;
+// }
+
+// .border-base {
+//   border: $border-width-base solid;
+// }
+
+// .border-lg {
+//   border: $border-width-lg solid;
+// }
+
+// .box-shadow-base {
+//   box-shadow: $box-shadow-base;
+// }
+
+// .container--max-width-base {
+//   max-width: $container--max-width-base;
+// }
+
+// .container--max-width-sm {
+//   max-width: $container--max-width-sm;
+// }
+
+// .container--max-width-xsm {
+//   max-width: $container--max-width-xsm;
+// }
+
+// .container--max-width-lg {
+//   max-width: $container--max-width-lg;
+// }
+
+// .container--max-width-xlg {
+//   max-width: $container--max-width-xlg;
+// }
+
+// .copy--font-weight-highlight {
+//   font-weight: $copy--font-weight-highlight;
+// }
+
+// .d-flex-center {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .d-grid {
+//   display: grid;
+// }
+
+// .fill-space {
+//   width: 100%;
+//   height: 100%;
+// }
+
+// // flex-basis
+// .flex-basis-40 {
+//   flex-basis: 40%;
+// }
+// .flex-basis-60 {
+//   flex-basis: 60%;
+// }
+
+// .font-size-sm {
+//   font-size: $font-size-sm;
+// }
+
+// .font-size-xsm {
+//   font-size: $font-size-xsm;
+// }
+
+// .invisible {
+//   display: none;
+// }
+
+// .link--fill-space {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 100%;
+//   width: 100%;
+// }
+
+// // margins
+// .mt-base {
+//   margin-top: $spacer-base;
+// }
+// .mr-base {
+//   margin-right: $spacer-base;
+// }
+// .mb-base {
+//   margin-bottom: $spacer-base;
+// }
+// .ml-base {
+//   margin-left: $spacer-base;
+// }
+// .mt-sm {
+//   margin-top: $spacer-sm;
+// }
+// .mr-sm {
+//   margin-right: $spacer-sm;
+// }
+// .mb-sm {
+//   margin-bottom: $spacer-sm;
+// }
+// .ml-sm {
+//   margin-left: $spacer-sm;
+// }
+// .mt-xsm {
+//   margin-top: $spacer-xsm;
+// }
+// .mr-xsm {
+//   margin-right: $spacer-xsm;
+// }
+// .mb-xsm {
+//   margin-bottom: $spacer-xsm;
+// }
+// .ml-xsm {
+//   margin-left: $spacer-xsm;
+// }
+// .mt-xlg {
+//   margin-top: $spacer-xlg;
+// }
+// .mr-xlg {
+//   margin-right: $spacer-xlg;
+// }
+// .mb-xlg {
+//   margin-bottom: $spacer-xlg;
+// }
+// .ml-xlg {
+//   margin-left: $spacer-xlg;
+// }
+
+// .max-width-max-content {
+//   max-width: max-content;
+// }
