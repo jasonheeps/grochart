@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   resources :organizations, only: [:new]
   # get 'organizations/:id/new_organization', to: 'organizations#new', as: 'new_organization'
+
+  resources :circles, only: [:new]
 end
