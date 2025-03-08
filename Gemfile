@@ -3,6 +3,19 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
 
+#######################
+# manually added gems #
+#######################
+# add gems by inserting them here, then run 'bundle install'
+# if the gem cannot be found, try 'bundle --full-index' instead
+
+gem 'bootstrap'
+gem 'popper_js'
+
+##############################
+# end of manually added gems #
+##############################
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.7'
 # Use sqlite3 as the database for Active Record

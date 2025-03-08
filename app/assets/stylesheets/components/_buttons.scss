@@ -1,6 +1,6 @@
-// TODO: Find out how I didn't use @import when building soultranet and it still worked
-@import '../config/_global.scss';
-@import '../config/_colors.scss';
+// TODO: find out why imports through application.scss don't work
+@import "../config/colors";
+@import "../config/global";
 
 // NOTE: - a button with text is structured <a> click me </a>
 //       - an icon button is structured <a> <i> </i> </a>
@@ -9,7 +9,7 @@
 .btn-basic {
   // border-radius: ;
   display: inline-block ;
-  font-size: font-size-base;
+  // font-size: $font-size;
   padding: $btn--padding;
   text-decoration: none;
   // transition: ;
