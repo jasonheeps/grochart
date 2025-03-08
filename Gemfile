@@ -10,7 +10,8 @@ ruby '2.6.6'
 # if the gem cannot be found, try 'bundle --full-index' instead
 
 gem 'bootstrap'
-gem 'popper_js'
+# gem 'popper_js'
+gem 'simple_form'
 
 ##############################
 # end of manually added gems #
