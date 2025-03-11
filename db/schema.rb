@@ -10,14 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_03_08_183401) do
+ActiveRecord::Schema.define(version: 2025_03_11_130851) do
 
   create_table "circles", force: :cascade do |t|
     t.string "name"
     t.string "acronym"
-    t.bigint "parent_id"
+    t.integer "parent_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "organization_id", null: false
   end
 
   create_table "organizations", force: :cascade do |t|

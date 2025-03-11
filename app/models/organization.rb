@@ -1,6 +1,9 @@
 class Organization < ApplicationRecord
-  def assign_url_token(organization = self)
-    organization.url_token = generate_token
+  has_many :circles, foreign_key: 'organization_id'
+
+  # NOTE: self = instance that's calling the method
+  def assign_url_token
+    self.url_token = generate_token
   end
 
   # Returns a *unique* url_token
@@ -10,14 +13,16 @@ class Organization < ApplicationRecord
   end
 
   # Returns all existing url_tokens
+  # NOTE: 'def self.method' is a method of the class Organization
   def self.url_tokens
     # NOTE: The following line is equal to 'Organization.all.map { |o| o.url_token }'
     Organization.all.map(&:url_token) # => [token_1, token_2, ...]
   end
 
-  # def to_param
-  #   url_token
-  # end
+  # NOTE: to_param ensures that url_token is used (instead of id) in routes
+  def to_param
+    url_token
+  end
 
   # alias_method :id, :url_token
 end

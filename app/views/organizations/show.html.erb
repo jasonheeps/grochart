@@ -1,1 +1,25 @@
 organizations/show.html.erb
+
+<div>
+  Name: <%= @organization.name %>
+</div>
+<div>
+  URL Token: <%= @organization.url_token %>
+</div>
+<div>
+  ID: <%= @organization.id %>
+</div>
+<div>
+  Kreise:
+  <% @organization.circles.each do |c| %>
+    <div>
+      <%= c.name %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'Add Circle',
+  # new_organization_circle_path(@circle),
+  new_circle_path,
+  class: 'btn-basic btn--clr-new'
+%>
