@@ -5,19 +5,22 @@ class CirclesController < ApplicationController
 
   def create
     @circle = Circle.new(circle_params)
-    @circle.organization = Organization.find_by_id(:organization_id)
+    @circle.organization_id = organization.id
     if @circle.save
-      redirect_to organization_path(@circle.organization)
+      redirect_to organization_path(organization)
     else
       render :new
     end
   end
 
-  # def assign_organization
-  #   self.
-  # end
+  def organization
+    Organization.find_by(url_token: params[:url_token])
+  end
+
+  private
 
   def circle_params
-    params.require(:circle).permit(:name, :acronym, :parent_id, :organization_id)
+    params.require(:circle).permit(:name)
+    # params.require(:circle).permit(:name, :acronym, :parent_id, :organization_id)
   end
 end
